@@ -1,5 +1,13 @@
-# react-weather-typescript
+# Anga
 
-Third reboot of my simple React weather app that displays weather information from the OpenWeatherMap API, this time in [**typescript**](https://github.com/microsoft/TypeScript) and [**Tailwind CSS**](https://github.com/tailwindcss/tailwindcss).
+Anga is a beautiful weather app that shows the current weather and next day forecast for a given location.
+
+## Anga is built using
+
+- [Heroicons](https://heroicons.com)
+- [React](https://reactjs.org)
+- [TailwindCSS](https://tailwindcss.com)
+- [Weatherstack API](https://weatherstack.com)
+- [Weather icons by Basmilius](https://bas.dev/projects/weather-icons)
 
 MIT License
