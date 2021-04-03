@@ -1,5 +1,9 @@
 # Anga
 
+<!-- prettier-ignore-start -->
+![GPL 3.0 License][license-badge]
+<!-- prettier-ignore-end -->
+
 Anga is a beautiful weather app that shows the current weather and next day forecast for a given location.
 
 ## Anga is built using
@@ -10,4 +14,6 @@ Anga is a beautiful weather app that shows the current weather and next day fore
 - [Weatherstack API](https://weatherstack.com)
 - [Weather icons by Basmilius](https://bas.dev/projects/weather-icons)
 
-MIT License
+<!-- prettier-ignore-start -->
+[license-badge]: https://img.shields.io/badge/license-GPL%203.0%20License-blue.svg?style=flat-square
+<!-- prettier-ignore-end -->

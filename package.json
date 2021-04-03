@@ -1,6 +1,6 @@
 {
-  "name": "react-weather-ts",
-  "version": "0.1.0",
+  "name": "anga",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.1",
@@ -28,7 +28,8 @@
     "eject": "craco eject",
     "lint": "eslint src --ext tsx",
     "prettier": "prettier",
-    "coverage": "npm test -- --coverage"
+    "coverage": "npm test -- --coverage",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -42,6 +43,11 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint"
+    }
+  },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "@types/lodash": "^4.14.168",
@@ -53,6 +59,7 @@
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.1",
+    "husky": "^6.0.0",
     "postcss": "^7.0.35",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
