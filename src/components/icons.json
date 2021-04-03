@@ -1,0 +1,207 @@
+{
+  "day": {
+    "113": {
+      "label": "Clear/Sunny",
+      "icon": "clear-day"
+    },
+    "116": {
+      "label": "Partly cloudy",
+      "icon": "partly-cloudy-day"
+    },
+    "119": {
+      "label": "Cloudy",
+      "icon": "cloudy"
+    },
+    "122": {
+      "label": "Overcast",
+      "icon": "overcast-day"
+    },
+    "143": {
+      "label": "Mist",
+      "icon": "mist"
+    },
+    "176": {
+      "label": "Patchy rain narby",
+      "icon": "rain"
+    },
+    "179": {
+      "label": "Patchy snow nearby",
+      "icon": "snow"
+    },
+    "182": {
+      "label": "Patchy sleet nearby",
+      "icon": "sleet"
+    },
+    "185": {
+      "label": "Patchy freezing drizzle nearby",
+      "icon": "drizzle"
+    },
+    "200": {
+      "label": "Thundery outbreaks nearby",
+      "icon": "thunderstorms-day"
+    },
+    "227": {
+      "label": "Blowing snow",
+      "icon": "snow"
+    },
+    "230": {
+      "label": "Blizzard",
+      "icon": "snow"
+    },
+    "248": { "label": "Fog", "icon": "fog-day" },
+    "260": { "label": "Freezing fog", "icon": "fog" },
+    "263": { "label": "Patchy light drizzle", "icon": "drizzle" },
+    "266": { "label": "Light drizzle", "icon": "drizzle" },
+    "281": { "label": "Freezing drizzle", "icon": "drizzle" },
+    "284": { "label": "Heavy freezing drizzle", "icon": "drizzle" },
+    "293": { "label": "Patchy light rain", "icon": "rain" },
+    "296": { "label": "Light rain", "icon": "rain" },
+    "299": { "label": "Moderate rain at times", "icon": "rain" },
+    "302": { "label": "Moderate rain", "icon": "rain" },
+    "305": { "label": "Heavy rain at times", "icon": "rain" },
+    "308": { "label": "Heavy rain", "icon": "rain" },
+    "311": { "label": "Light freezing rain", "icon": "rain" },
+    "314": { "label": "Moderate or Heavy freezing rain", "icon": "rain" },
+    "317": { "label": "Light sleet", "icon": "sleet" },
+    "320": { "label": "Moderate or heavy sleet", "icon": "sleet" },
+    "323": { "label": "Patchy light snow", "icon": "snowflake" },
+    "326": { "label": "Light snow", "icon": "snowflake" },
+    "329": { "label": "Patchy moderate snow", "icon": "snow" },
+    "332": { "label": "Moderate snow", "icon": "snow" },
+    "335": { "label": "Patchy heavy snow", "icon": "snow" },
+    "338": { "label": "Heavy snow", "icon": "snow" },
+    "350": { "label": "Ice pellets", "icon": "hail" },
+    "353": { "label": "Light rain shower", "icon": "rain" },
+    "356": { "label": "Moderate or heavy rain shower", "icon": "rain" },
+    "359": { "label": "Torrential rain shower", "icon": "rain" },
+    "362": { "label": "Light sleet showers", "icon": "sleet" },
+    "365": { "label": "Moderate or heavy sleet showers", "icon": "sleet" },
+    "368": { "label": "Light snow showers", "icon": "snow" },
+    "371": { "label": "Moderate or heavy snow showers", "icon": "snow" },
+    "374": { "label": "Light showers of ice pellets", "icon": "snow" },
+    "377": {
+      "label": "Moderate or heavy showers of ice pellets",
+      "icon": "snow"
+    },
+    "386": {
+      "label": "Patchy light rain in area with thunder",
+      "icon": "thunderstorms-day-rain"
+    },
+    "389": {
+      "label": "Moderate or heavy rain in area with thunder",
+      "icon": "thunderstorms-day-rain"
+    },
+    "392": {
+      "label": "Patchy light snow in area with thunder",
+      "icon": "snow"
+    },
+    "395": {
+      "label": "Moderate or heavy snow in area with thunder",
+      "icon": "snow"
+    }
+  },
+  "night": {
+    "113": {
+      "label": "Clear/Sunny",
+      "icon": "clear-night"
+    },
+    "116": {
+      "label": "Partly cloudy",
+      "icon": "partly-cloudy-night"
+    },
+    "119": {
+      "label": "Cloudy",
+      "icon": "cloudy"
+    },
+    "122": {
+      "label": "Overcast",
+      "icon": "overcast-night"
+    },
+    "143": {
+      "label": "Mist",
+      "icon": "mist"
+    },
+    "176": {
+      "label": "Patchy rain narby",
+      "icon": "rain"
+    },
+    "179": {
+      "label": "Patchy snow nearby",
+      "icon": "snow"
+    },
+    "182": {
+      "label": "Patchy sleet nearby",
+      "icon": "sleet"
+    },
+    "185": {
+      "label": "Patchy freezing drizzle nearby",
+      "icon": "drizzle"
+    },
+    "200": {
+      "label": "Thundery outbreaks nearby",
+      "icon": "thunderstorms-night"
+    },
+    "227": {
+      "label": "Blowing snow",
+      "icon": "snow"
+    },
+    "230": {
+      "label": "Blizzard",
+      "icon": "snow"
+    },
+    "248": { "label": "Fog", "icon": "fog-night" },
+    "260": { "label": "Freezing fog", "icon": "fog-night" },
+    "263": { "label": "Patchy light drizzle", "icon": "drizzle" },
+    "266": { "label": "Light drizzle", "icon": "drizzle" },
+    "281": { "label": "Freezing drizzle", "icon": "drizzle" },
+    "284": { "label": "Heavy freezing drizzle", "icon": "drizzle" },
+    "293": { "label": "Patchy light rain", "icon": "partly-cloudy-night-rain" },
+    "296": { "label": "Light rain", "icon": "partly-cloudy-night-rain" },
+    "299": { "label": "Moderate rain at times", "icon": "rain" },
+    "302": { "label": "Moderate rain", "icon": "rain" },
+    "305": { "label": "Heavy rain at times", "icon": "rain" },
+    "308": { "label": "Heavy rain", "icon": "rain" },
+    "311": { "label": "Light freezing rain", "icon": "rain" },
+    "314": { "label": "Moderate or Heavy freezing rain", "icon": "rain" },
+    "317": { "label": "Light sleet", "icon": "sleet" },
+    "320": { "label": "Moderate or heavy sleet", "icon": "sleet" },
+    "323": { "label": "Patchy light snow", "icon": "snowflake" },
+    "326": { "label": "Light snow", "icon": "snowflake" },
+    "329": { "label": "Patchy moderate snow", "icon": "snow" },
+    "332": { "label": "Moderate snow", "icon": "snow" },
+    "335": { "label": "Patchy heavy snow", "icon": "snow" },
+    "338": { "label": "Heavy snow", "icon": "snow" },
+    "350": { "label": "Ice pellets", "icon": "hail" },
+    "353": { "label": "Light rain shower", "icon": "rain" },
+    "356": { "label": "Moderate or heavy rain shower", "icon": "rain" },
+    "359": { "label": "Torrential rain shower", "icon": "rain" },
+    "362": { "label": "Light sleet showers", "icon": "sleet" },
+    "365": {
+      "label": "Moderate or heavy sleet showers",
+      "icon": "partly-cloudy-night-sleet"
+    },
+    "368": { "label": "Light snow showers", "icon": "snow" },
+    "371": { "label": "Moderate or heavy snow showers", "icon": "snow" },
+    "374": { "label": "Light showers of ice pellets", "icon": "snow" },
+    "377": {
+      "label": "Moderate or heavy showers of ice pellets",
+      "icon": "snow"
+    },
+    "386": {
+      "label": "Patchy light rain in area with thunder",
+      "icon": "thunderstorms-night-rain"
+    },
+    "389": {
+      "label": "Moderate or heavy rain in area with thunder",
+      "icon": "thunderstorms-night-rain"
+    },
+    "392": {
+      "label": "Patchy light snow in area with thunder",
+      "icon": "snow"
+    },
+    "395": {
+      "label": "Moderate or heavy snow in area with thunder",
+      "icon": "snow"
+    }
+  }
+}
