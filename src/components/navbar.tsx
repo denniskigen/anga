@@ -33,9 +33,9 @@ const Navbar: React.FunctionComponent = () => {
                   aria-hidden="true"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
@@ -49,9 +49,9 @@ const Navbar: React.FunctionComponent = () => {
                   aria-hidden="true"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 </svg>
@@ -90,7 +90,7 @@ const Navbar: React.FunctionComponent = () => {
                   </Link>
 
                   <a
-                    href="https://github.com/denniskigen/react-weather-ts"
+                    href="https://github.com/denniskigen/anga"
                     className="text-gray-400 hover:text-gray-500 transition-colors duration-200"
                   >
                     <span className="sr-only">Anga on GitHub</span>
@@ -133,7 +133,7 @@ const Navbar: React.FunctionComponent = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/denniskigen/react-weather-ts"
+              href="https://github.com/denniskigen/anga"
               className="text-indigo-700 hover:bg-gray-400 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               GitHub

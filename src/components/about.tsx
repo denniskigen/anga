@@ -5,7 +5,7 @@ const About: React.FunctionComponent = () => {
   return (
     <>
       <section
-        className="max-w-7xl pt-2 mt-12 rounded-2xl bg-contain bg-no-repeat mx-auto lg:w-1/2 sm:w-2/3 xl:w-3/5 2xl:w-2/5 h-80 mb-96 bg-yellow-200 bg-hero-pattern"
+        className="max-w-7xl pt-2 mt-12 rounded-2xl bg-contain bg-no-repeat mx-auto lg:w-1/2 sm:w-2/3 xl:w-3/5 2xl:w-2/5 h-auto mb-96 bg-yellow-200 bg-hero-pattern"
         style={{ backgroundPositionY: '100%' }}
       >
         <div className="p-4">
@@ -15,6 +15,26 @@ const About: React.FunctionComponent = () => {
           <p className="pt-4 text-gray-500">
             Anga is a beautiful weather app that shows the current weather and
             next day forecast for a given location.
+          </p>
+          <p className="pt-4 text-gray-500">
+            Anga is built on top of the free tier version of the{' '}
+            <a
+              className="underline text-indigo-500 hover:text-indigo-700"
+              href="https://weatherstack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Weatherstack API
+            </a>
+            . This brings with it several limitations, most notably the
+            inability to securely access the API via HTTPS. This is why you're
+            only shown the loading screen in the live website. I don't know of
+            any workarounds to this that don't involve insecure access or
+            ponying up the yearly subscription to a higher pricing tier.
+            Regardless, if you're really eager to try the app, click on the ℹ️
+            to the left of the URL in your browser's address bar and go to Site
+            Settings and enable insecure access. This is obviously sub-optimal,
+            but I can't think of any other way just now.
           </p>
         </div>
         <div className="px-4">
@@ -76,5 +96,3 @@ const About: React.FunctionComponent = () => {
 };
 
 export { About };
-
-// mt-8 mx-auto py-6 sm:px-6 lg:px-8 p-7 h-64

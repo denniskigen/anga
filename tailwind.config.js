@@ -3,13 +3,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: theme => ({
+      backgroundImage: (theme) => ({
         'hero-pattern': "url('../assets/about-bg.png')",
-       })
+      }),
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

@@ -82,6 +82,11 @@ const WeatherCard: React.FunctionComponent<WeatherCardProps> = ({
           <img
             width="300px"
             height="250px"
+            alt={
+              weatherIcons[weather.is_day.match(/yes/i) ? 'day' : 'night'][
+                weather.weather_code.toString()
+              ].icon
+            }
             src={
               iconURL +
               weatherIcons[weather.is_day.match(/yes/i) ? 'day' : 'night'][

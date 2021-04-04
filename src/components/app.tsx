@@ -1,5 +1,5 @@
 import React from 'react';
-import { debounce } from 'lodash';
+import debounce from 'lodash-es/debounce';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { About } from './about';
@@ -36,10 +36,12 @@ function App() {
       debounce((searchTerm) => {
         setDebouncedSearchTerm(searchTerm);
       }, searchTimeout),
-    []
+    [],
   );
 
-  const handleSearchTermChange = (event: any) => {
+  const handleSearchTermChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     if (event.target.value) {
       setIsSearching(true);
     }
@@ -104,7 +106,7 @@ function App() {
 
 async function fetchWeather(city: string): Promise<WeatherData> {
   const response = await window.fetch(
-    `${apiURL}/forecast?access_key=${apiKey}&query=${city}`
+    `${apiURL}/forecast?access_key=${apiKey}&query=${city}`,
   );
   const {
     current,
@@ -117,8 +119,7 @@ async function fetchWeather(city: string): Promise<WeatherData> {
     if (current && forecast && location) {
       return { current, forecast, location };
     } else if (!success && error) {
-      // return Promise.reject(new Error(`Error ${error.code}: ${error.type}`));
-      return Promise.reject(new Error(`Error getting weather for "${city}"`));
+      return Promise.reject(new Error(`No results found for "${city}"`));
     }
   }
 }
