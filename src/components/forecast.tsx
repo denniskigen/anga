@@ -1,7 +1,6 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import { WeatherForecast } from '../types';
-
 interface ForecastProps {
   forecast: Array<WeatherForecast>;
 }

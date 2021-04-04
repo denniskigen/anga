@@ -2,7 +2,7 @@ import React from 'react';
 
 interface SearchProps {
   error: Error;
-  handleSearchTermChange(evt: any): any;
+  handleSearchTermChange(evt: React.ChangeEvent<HTMLInputElement>): void;
   isSearching: boolean;
 }
 

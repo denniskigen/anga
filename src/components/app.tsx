@@ -21,7 +21,7 @@ import './app.css';
 const apiKey = process.env.REACT_APP_API_KEY;
 const apiURL = process.env.REACT_APP_API_URL;
 
-function App() {
+const App: React.FunctionComponent = () => {
   const searchTimeout = 1000;
   const [city, setCity] = React.useState('Nizhny');
   const [error, setError] = React.useState<Error | null>(null);
@@ -102,7 +102,7 @@ function App() {
       </Router>
     </>
   );
-}
+};
 
 async function fetchWeather(city: string): Promise<WeatherData> {
   const response = await window.fetch(

@@ -51,8 +51,8 @@
     "@types/lodash": "^4.14.168",
     "@types/lodash-es": "^4.17.4",
     "@types/react-router-dom": "^5.1.7",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
-    "@typescript-eslint/parser": "^2.30.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "autoprefixer": "^9.8.6",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
@@ -71,11 +71,16 @@
     }
   },
   "lint-staged": {
-    "*.tsx": "prettier --write"
+    "*.{js,ts,tsx,md,css}": [
+      "yarn format",
+      "yarn lint",
+      "yarn run check",
+      "yarn test"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn format && yarn check && yarn test"
+      "pre-commit": "lint-staged"
     }
   }
 }

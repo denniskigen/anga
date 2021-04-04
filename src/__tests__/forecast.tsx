@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '../app-test-utils';
 import { Forecast } from '../components/forecast';
 import { weather } from '../weather';

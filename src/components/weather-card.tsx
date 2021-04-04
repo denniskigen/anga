@@ -2,6 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import type { CurrentWeatherData, LocationData } from '../types';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const weatherIcons = require('./icons');
 const iconURL = `https://raw.githubusercontent.com/basmilius/weather-icons/master/production/line/all/`;
 

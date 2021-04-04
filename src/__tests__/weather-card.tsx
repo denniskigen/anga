@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '../app-test-utils';
 import { WeatherCard } from '../components/weather-card';
 import { weather } from '../weather';

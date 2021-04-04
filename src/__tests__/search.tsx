@@ -1,8 +1,10 @@
+import React from 'react';
 import { render, screen } from '../app-test-utils';
 import { Search } from '../components/search';
 
 const testProps = {
   error: new Error(''),
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   handleSearchTermChange: () => {},
   isSearching: false,
 };
