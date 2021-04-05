@@ -71,6 +71,9 @@
       "!<rootDir>/node_modules/**/*",
       "!<rootDir>/src/setupTests*"
     ],
+    "coverageReporters": [
+      "lcov"
+    ],
     "moduleNameMapper": {
       "^lodash-es/(.*)$": "lodash/$1"
     },
