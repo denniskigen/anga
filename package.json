@@ -66,9 +66,17 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/components/*.tsx",
+      "!<rootDir>/node_modules/**/*",
+      "!<rootDir>/src/setupTests*"
+    ],
     "moduleNameMapper": {
       "^lodash-es/(.*)$": "lodash/$1"
-    }
+    },
+    "testMatch": [
+      "**/__tests__/*.tsx"
+    ]
   },
   "lint-staged": {
     "*.{js,ts,tsx,md,css}": [
