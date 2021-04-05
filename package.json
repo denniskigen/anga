@@ -28,7 +28,7 @@
     "test": "craco test --watchAll=false",
     "eject": "craco eject",
     "lint": "eslint src --ext tsx",
-    "coverage": "npm test -- --coverage --watchAll=false",
+    "coverage": "craco test --coverage --watchAll=false",
     "format": "prettier --write \"**/*.+(js|json|css|html|ts|tsx)\"",
     "check": "prettier --check \"**/*.+(js|json|css|html|ts|tsx)\"",
     "prepare": "husky install"
