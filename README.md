@@ -6,6 +6,10 @@
 
 Anga is a beautiful weather app that shows the current weather and next day forecast for a given location.
 
+<!-- prettier-ignore-start -->
+![Home page](https://github.com/denniskigen/anga/blob/main/public/screen.png)
+<!-- prettier-ignore-end -->
+
 ## Anga is built using
 
 - [Heroicons](https://heroicons.com)
