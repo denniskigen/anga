@@ -90,6 +90,8 @@ const Navbar: React.FunctionComponent = () => {
                   </Link>
 
                   <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/denniskigen/anga"
                     className="text-gray-400 hover:text-gray-500 transition-colors duration-200"
                   >
