@@ -4,6 +4,7 @@
 ![GPL 3.0 License][license-badge]
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3c880d2a-d3ae-4e8c-bc1f-0a8ec782d192/deploy-status)](https://app.netlify.com/sites/anga-weather/deploys)
 [![validate](https://github.com/denniskigen/anga/actions/workflows/validate.yml/badge.svg)](https://github.com/denniskigen/anga/actions/workflows/validate.yml)
+[![codecov](https://codecov.io/gh/denniskigen/anga/branch/master/graph/badge.svg?token=NINC9P4G2X)](https://codecov.io/gh/denniskigen/anga)
 <!-- prettier-ignore-end -->
 
 Anga is a beautiful weather app that shows the current weather and next day forecast for a given location.
