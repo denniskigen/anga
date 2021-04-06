@@ -43,7 +43,7 @@ describe('<App />', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        /Anga is a beautiful weather app that shows the current weather and next day forecast for a given location./i,
+        /Anga is a beautiful weather app that shows instant, accurate weather information for any location in the world./i,
       ),
     ).toBeInTheDocument();
 
@@ -99,7 +99,11 @@ describe('<App />', () => {
     renderApp();
     await screen.findByRole('heading', { name: /^anga$/i });
 
-    expect(screen.queryByTitle(/Search for location/i)).not.toBeInTheDocument();
+    expect(
+      screen.queryByTitle(
+        /Search for a location by name, coordinates of IP address/i,
+      ),
+    ).not.toBeInTheDocument();
 
     const searchInput = screen.getByRole('search');
     userEvent.clear(searchInput);

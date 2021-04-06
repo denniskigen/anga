@@ -29,7 +29,7 @@ describe('<About />', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        /Anga is a beautiful weather app that shows the current weather and next day forecast for a given location\./i,
+        /Anga is a beautiful weather app that shows instant, accurate weather information for any location in the world\./i,
       ),
     ).toBeInTheDocument();
     expect(
@@ -37,5 +37,6 @@ describe('<About />', () => {
     ).toBeInTheDocument();
     expect(screen.getByText(/dennis kigen/i)).toBeInTheDocument();
     expect(screen.getByText(/©2021 - now/i)).toBeInTheDocument();
+    expect(screen.getByAltText(/buy me a coffee/i)).toBeInTheDocument();
   });
 });

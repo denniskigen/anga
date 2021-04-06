@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Footer } from './footer';
 
@@ -14,11 +13,11 @@ const About: React.FunctionComponent = () => {
             About Anga
           </h3>
           <p className="pt-4 text-gray-500">
-            Anga is a beautiful weather app that shows the current weather and
-            next day forecast for a given location.
+            Anga is a beautiful weather app that shows instant, accurate weather
+            information for any location in the world.
           </p>
           <p className="pt-4 text-gray-500">
-            Anga is built on top of the free tier version of the{' '}
+            Anga is built on top of the{' '}
             <a
               className="underline text-indigo-500 hover:text-indigo-700"
               href="https://weatherstack.com/"
@@ -27,15 +26,24 @@ const About: React.FunctionComponent = () => {
             >
               Weatherstack API
             </a>
-            . This brings with it several limitations, most notably the
-            inability to securely access the API via HTTPS. This is why you're
-            only shown the loading screen in the live website. I don't know of
-            any workarounds to this that don't involve insecure access or
-            ponying up the yearly subscription to a higher pricing tier.
-            Regardless, if you're really eager to try the app, click on the ℹ️
-            to the left of the URL in your browser's address bar and go to Site
-            Settings and enable insecure access. This is obviously sub-optimal,
-            but I can't think of any other way just now.
+            . As it uses the free tier plan, it&apos;s limited in various ways.
+            Most notably, it does not make API calls securely via HTTPS as that
+            feature is only available to the paid plans. This is why when you
+            load the app you might only see the loading screen. To get around
+            this, you&apos;d need to grant the website insecure access in your
+            browser. To do so, click the ℹ️ to the right of the URL in your
+            address bar and go to site settings. Scroll down to &apos;Insecure
+            content&apos; and select &apos;Allow&apos;. If you like the app, do
+            consider starring it on{' '}
+            <a
+              className="underline text-indigo-500 hover:text-indigo-700"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/denniskigen/anga"
+            >
+              GitHub
+            </a>
+            . Thanks for swinging by!
           </p>
         </div>
         <div className="px-4">
@@ -91,6 +99,19 @@ const About: React.FunctionComponent = () => {
           </ul>
         </div>
       </section>
+      <div className="flex justify-center">
+        <a
+          href="https://www.buymeacoffee.com/denniskigen"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+            alt="Buy Me A Coffee"
+            className="h-16 w-56"
+          />
+        </a>
+      </div>
       <Footer />
     </>
   );
