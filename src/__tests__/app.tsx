@@ -116,6 +116,6 @@ describe('<App />', () => {
       }),
     );
 
-    await screen.queryByTitle(/search for location/i);
+    screen.queryByTitle(/search for location/i);
   });
 });

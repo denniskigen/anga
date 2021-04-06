@@ -18,10 +18,7 @@ const Search: React.FunctionComponent<SearchProps> = ({
           <span>{error.message}</span>
         </div>
       ) : null}
-      <div
-        className="border-b border-gray-200 mb-2 py-4 flex items-center justify-start px-4"
-        style={{ width: '100%' }}
-      >
+      <div className="border-b border-gray-200 mb-2 py-4 flex items-center justify-start px-4 w-100">
         <svg
           width="24"
           height="24"
