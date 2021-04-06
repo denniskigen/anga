@@ -22,8 +22,9 @@ const apiKey = process.env.REACT_APP_API_KEY;
 const apiURL = process.env.REACT_APP_API_URL;
 
 const App: React.FunctionComponent = () => {
+  const query = `fetch:ip`; // auto-fetch user's IP
   const searchTimeout = 1000;
-  const [city, setCity] = React.useState('Nizhny');
+  const [city, setCity] = React.useState(query);
   const [error, setError] = React.useState<Error | null>(null);
   const [forecast, setForecast] = React.useState<Array<WeatherForecast>>(null);
   const [location, setLocation] = React.useState<LocationData>(null);

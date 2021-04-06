@@ -39,9 +39,9 @@ const Search: React.FunctionComponent<SearchProps> = ({
         <input
           type="search"
           role="search"
-          placeholder="Search for a location"
+          placeholder="Search for a location by name, coordinates or IP address"
           onChange={handleSearchTermChange}
-          className="w-3/4 mr-8 outline-none"
+          className="w-3/4 mr-8 outline-none truncate"
         />
         {isSearching ? (
           <svg
@@ -50,7 +50,7 @@ const Search: React.FunctionComponent<SearchProps> = ({
             fill="none"
             viewBox="0 0 24 24"
           >
-            <title>Search for location</title>
+            <title>Search for a location</title>
             <circle
               className="opacity-25"
               cx="12"

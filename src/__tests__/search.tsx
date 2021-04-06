@@ -17,7 +17,9 @@ describe('<Search />', () => {
 
     expect(screen.getByRole('search')).toBeInTheDocument();
     expect(
-      screen.getByPlaceholderText(/search for a location/i),
+      screen.getByPlaceholderText(
+        /search for a location by name, coordinates or ip address/i,
+      ),
     ).toBeInTheDocument();
   });
 });
