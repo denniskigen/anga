@@ -56,21 +56,21 @@ const App: React.FunctionComponent = () => {
   }, [debouncedSearchTerm, isSearching, setCity]);
 
   React.useEffect(() => {
-    fetchWeather(city)
-      .then((weatherData) => {
-        const { current, forecast, location } = weatherData;
-        if (error) {
-          setError(null);
-        }
-        setIsSearching(false);
+    async function getWeather() {
+      setIsSearching(false);
+      setError(null);
+
+      try {
+        const { current, forecast, location } = await fetchWeather(city);
         setLocation(location);
         setForecast(Object.values(forecast));
         setWeather(current);
-      })
-      .catch((err) => {
-        setIsSearching(false);
+      } catch (err) {
         setError(err);
-      });
+      }
+    }
+
+    getWeather();
   }, [city]);
 
   return (

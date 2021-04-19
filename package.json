@@ -86,7 +86,7 @@
       "yarn format",
       "yarn lint",
       "yarn run check",
-      "yarn test"
+      "yarn test --passWithNoTests"
     ]
   },
   "husky": {
