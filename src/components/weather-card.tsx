@@ -2,7 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import type { CurrentWeatherData, LocationData } from '../types';
 
-const weatherIcons = require('./icons');
+import * as weatherIcons from './icons.json';
 const iconURL = `https://raw.githubusercontent.com/basmilius/weather-icons/master/production/line/all/`;
 
 interface WeatherCardProps {

@@ -18,8 +18,8 @@ import type {
 } from '../types';
 import './app.css';
 
-const apiKey = process.env.REACT_APP_API_KEY;
-const apiURL = process.env.REACT_APP_API_URL;
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function App() {
   const searchTimeout = 1000;
@@ -104,20 +104,14 @@ function App() {
 
 async function fetchWeather(city: string): Promise<WeatherData> {
   const response = await window.fetch(
-    `${apiURL}/forecast?access_key=${apiKey}&query=${city}`
+    `${apiUrl}/forecast?access_key=${apiKey}&query=${city}`
   );
-  const {
-    current,
-    forecast,
-    location,
-    error,
-    success,
-  }: JSONResponse = await response.json();
+  const { current, forecast, location, error, success }: JSONResponse =
+    await response.json();
   if (response.ok) {
     if (current && forecast && location) {
       return { current, forecast, location };
     } else if (!success && error) {
-      // return Promise.reject(new Error(`Error ${error.code}: ${error.type}`));
       return Promise.reject(new Error(`Error getting weather for "${city}"`));
     }
   }
