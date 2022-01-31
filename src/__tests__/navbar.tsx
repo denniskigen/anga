@@ -1,17 +1,12 @@
 import React from 'react';
-import { render, screen, userEvent } from '../app-test-utils';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import userEvent from '@testing-library/user-event';
 import { Navbar } from '../components/navbar';
 
 describe('<Navbar />', () => {
-  const renderWithRouter = (ui: JSX.Element, { route = '/' } = {}) => {
-    window.history.pushState({}, 'Test page', route);
-
-    return render(ui, { wrapper: BrowserRouter });
-  };
-
   test('renders the navbar', async () => {
-    renderWithRouter(<Navbar />);
+    renderNavbar();
 
     expect(
       screen.getByRole('button', { name: /open main menu/i }),
@@ -24,7 +19,7 @@ describe('<Navbar />', () => {
   });
 
   test('clicking the button toggles displaying the main menu', async () => {
-    renderWithRouter(<Navbar />);
+    renderNavbar();
 
     const toggleButton = screen.getByRole('button', {
       name: /open main menu/i,
@@ -49,3 +44,11 @@ describe('<Navbar />', () => {
     ).toBeInTheDocument();
   });
 });
+
+function renderNavbar() {
+  render(
+    <BrowserRouter>
+      <Navbar />
+    </BrowserRouter>,
+  );
+}

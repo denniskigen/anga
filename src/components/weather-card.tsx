@@ -2,8 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import type { CurrentWeatherData, LocationData } from '../types';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const weatherIcons = require('./icons');
+import * as weatherIcons from './icons.json';
 const iconURL = `https://raw.githubusercontent.com/basmilius/weather-icons/master/production/line/all/`;
 
 interface WeatherCardProps {
@@ -11,10 +10,22 @@ interface WeatherCardProps {
   weather: CurrentWeatherData;
 }
 
+interface IconDescription {
+  label: string;
+  icon: string;
+}
+
+type TimeOfDay = 'day' | 'night';
+
 const WeatherCard: React.FunctionComponent<WeatherCardProps> = ({
   location,
   weather,
 }) => {
+  const icons: Record<
+    TimeOfDay,
+    Record<string, IconDescription>
+  > = weatherIcons;
+
   return (
     <div className="overflow-hidden p-2 border-b border-gray-200">
       <div className="py-1 flex items-center justify-start px-4 mb-4">
@@ -84,13 +95,13 @@ const WeatherCard: React.FunctionComponent<WeatherCardProps> = ({
             width="300px"
             height="250px"
             alt={
-              weatherIcons[weather.is_day.match(/yes/i) ? 'day' : 'night'][
+              icons[weather.is_day.match(/yes/i) ? 'day' : 'night'][
                 weather.weather_code.toString()
               ].icon
             }
             src={
               iconURL +
-              weatherIcons[weather.is_day.match(/yes/i) ? 'day' : 'night'][
+              icons[weather.is_day.match(/yes/i) ? 'day' : 'night'][
                 weather.weather_code.toString()
               ].icon +
               '.svg'

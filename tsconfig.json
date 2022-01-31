@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -15,7 +15,8 @@
     "noEmit": true,
     "strictNullChecks": false,
     "jsx": "react-jsx",
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "types": ["vite/client", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["src"]
+  "include": ["src", "./jest-setup.ts"]
 }

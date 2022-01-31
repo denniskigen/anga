@@ -1,6 +1,6 @@
 import React from 'react';
 import debounce from 'lodash-es/debounce';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { About } from './about';
 import { Footer } from './footer';
@@ -18,8 +18,8 @@ import type {
 } from '../types';
 import './app.css';
 
-const apiKey = process.env.REACT_APP_API_KEY;
-const apiURL = process.env.REACT_APP_API_URL;
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const App: React.FunctionComponent = () => {
   const query = `fetch:ip`; // auto-fetch user's IP
@@ -66,7 +66,9 @@ const App: React.FunctionComponent = () => {
         setForecast(Object.values(forecast));
         setWeather(current);
       } catch (err) {
-        setError(err);
+        if (err instanceof Error) {
+          setError(err);
+        }
       }
     }
 
@@ -77,29 +79,32 @@ const App: React.FunctionComponent = () => {
     <>
       <Router>
         <Navbar />
-        <Switch>
-          <Route exact path="/">
-            {weather && Object.keys(weather).length ? (
-              <main>
-                <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 md:w-2/3 lg:w-2/3 xl:w-3/5 2xl:w-2/5">
-                  <Search
-                    error={error}
-                    handleSearchTermChange={handleSearchTermChange}
-                    isSearching={isSearching}
-                  />
-                  <WeatherCard location={location} weather={weather} />
-                  <Forecast forecast={forecast} />
-                </div>
-                <Footer />
-              </main>
-            ) : (
-              <Loading />
-            )}
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                {weather && Object.keys(weather).length ? (
+                  <main>
+                    <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 md:w-2/3 lg:w-2/3 xl:w-3/5 2xl:w-2/5">
+                      <Search
+                        error={error}
+                        handleSearchTermChange={handleSearchTermChange}
+                        isSearching={isSearching}
+                      />
+                      <WeatherCard location={location} weather={weather} />
+                      <Forecast forecast={forecast} />
+                    </div>
+                    <Footer />
+                  </main>
+                ) : (
+                  <Loading />
+                )}
+              </>
+            }
+          ></Route>
+          <Route path="/about" element={<About />} />
+        </Routes>
       </Router>
     </>
   );
@@ -107,20 +112,15 @@ const App: React.FunctionComponent = () => {
 
 async function fetchWeather(city: string): Promise<WeatherData> {
   const response = await window.fetch(
-    `${apiURL}/forecast?access_key=${apiKey}&query=${city}`,
+    `${apiUrl}/forecast?access_key=${apiKey}&query=${city}`,
   );
-  const {
-    current,
-    forecast,
-    location,
-    error,
-    success,
-  }: JSONResponse = await response.json();
+  const { current, forecast, location, error, success }: JSONResponse =
+    await response.json();
   if (response.ok) {
     if (current && forecast && location) {
       return { current, forecast, location };
     } else if (!success && error) {
-      return Promise.reject(new Error(`No results found for "${city}"`));
+      return Promise.reject(new Error(`Error getting weather for "${city}"`));
     }
   }
 }

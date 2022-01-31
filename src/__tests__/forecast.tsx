@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '../app-test-utils';
+import { render, screen } from '@testing-library/react';
 import { Forecast } from '../components/forecast';
 import { weather } from '../weather';
 

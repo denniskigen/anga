@@ -1,13 +1,8 @@
 import React from 'react';
-import {
-  render,
-  screen,
-  createMemoryHistory,
-  userEvent,
-  Router,
-} from '../app-test-utils';
-import App from '../components/app';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { weather } from '../weather';
+import App from '../components/app';
 
 jest.mock('lodash', () => {
   const module = jest.requireActual('lodash');
@@ -16,23 +11,11 @@ jest.mock('lodash', () => {
 });
 
 describe('<App />', () => {
-  const renderApp = () => render(<App />);
-
-  beforeAll(() => {
-    process.env.REACT_APP_API_URL = 'http://api.weatherstack.com';
-    process.env.REACT_APP_API_KEY = 'some-api-key';
-  });
   beforeEach(() => jest.spyOn(window, 'fetch'));
   afterEach(() => jest.restoreAllMocks());
 
   test('clicking navbar links navigates through the app', async () => {
-    const history = createMemoryHistory();
-
-    render(
-      <Router history={history}>
-        <App />
-      </Router>,
-    );
+    renderApp();
 
     const aboutLink = screen.getByText(/about/i);
     const leftClick = { button: 0 };
@@ -119,3 +102,7 @@ describe('<App />', () => {
     screen.queryByTitle(/search for location/i);
   });
 });
+
+function renderApp() {
+  render(<App />);
+}
