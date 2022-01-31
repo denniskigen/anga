@@ -10,6 +10,8 @@
     "coverage": "jest -- --coverage",
     "lint": "eslint src --ext tsx",
     "prettier": "prettier",
+    "format": "prettier --write \"**/*.+(js|json|css|html|ts|tsx)\"",
+    "check": "prettier --check \"**/*.+(js|json|css|html|ts|tsx)\"",
     "prepare": "husky install"
   },
   "browserslist": {
