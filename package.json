@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "test": "jest",
-    "coverage": "jest -- --coverage",
+    "coverage": "jest --coverage",
     "lint": "eslint src --ext tsx",
     "prettier": "prettier",
     "format": "prettier --write \"**/*.+(js|json|css|html|ts|tsx)\"",
